@@ -39,14 +39,19 @@ const runningSumOfArray = (arr) => {
 // Output: nums = [0,1,3,0,4,_,_,_]
 const removeElementFromArray = (arr, value) => {
   // write your code here
-  for (let i = 0; i < arr.length;i++){
-    if (arr[i] === value){
-      arr.splice(i,value);
-      arr.push("_");
-      i--;
-    };
-  };
-  return arr;
+  const arrd=[];
+  const arrn=[];
+
+  for(let k=0 ; k<arr.length ;k++){
+      if(arr[k]===val){
+          arrd.push("_");
+      }else{
+          arrn.push(arr[k]);
+      }
+  }
+  for(let i=0 ; i<arrd.length ; i++){
+  arrn.push(arrd[i]);}
+  return(arrn);
 
 };
 // -------------------------------------------------------------------------------------------------------
@@ -65,17 +70,10 @@ const removeElementFromArray = (arr, value) => {
 
 const oddFiltration = (arr) => {
   // write your code here
-  let arrOdd = [];
- for (let i=0 ; i<arr.length ; i++)
- {
-  if (arr[i]%2 !== 0)
-    {
-      
-      arrOdd.push(arr[i]);
-       
-    }
-    return arrOdd;
-  }
+  const odds = arr.filter(number => {
+    return number % 2 !== 0;
+  });
+  return odds;
 };
 // -------------------------------------------------------------------------------------------------------
 
