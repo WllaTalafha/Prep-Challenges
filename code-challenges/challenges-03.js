@@ -105,6 +105,11 @@ arrFilter(cvs);
 const targetArrayInGivenOrder = (numsArr, indexArr) => {
   let targetArr;
   // write your code here
+  for (let i = 0; i < indexArr.length; i++) {
+    targetArr[i] = numsArr[indexArr[i]]
+  }
+  console.log(targetArr);
+
 
   return targetArr;
 };
@@ -125,10 +130,10 @@ const targetArrayInGivenOrder = (numsArr, indexArr) => {
 const arrInc = (arr) => {
   let result = [];
   // write your code here
-    for(let i=0 ; i<arr.length;i++)
-    {
-        let result =arr[i]+10;
-    }
+  for (let i = 0; i < arr.length; i++)
+
+  result.push(arr[i] + 10)
+    
   return result;
 };
 // -------------------------------------------------------------------------------------------------------
