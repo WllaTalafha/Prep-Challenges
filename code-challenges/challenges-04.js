@@ -70,10 +70,11 @@ const oddFiltration = (arr) => {
  {
   if (arr[i]%2 !== 0)
     {
-       arr=arrOdd.push(arrOdd[i]);
+      
+      arrOdd.push(arr[i]);
        
     }
-    return arr;
+    return arrOdd;
   }
 };
 // -------------------------------------------------------------------------------------------------------
