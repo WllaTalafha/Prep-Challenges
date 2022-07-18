@@ -61,26 +61,7 @@
 
 const cvFormatter = (arr) => {
   // write your code here
-  let  arrMod = [];
 
-function arrFilter(arr) {
-
-for(let i=0 ; i<cvs.length ; i++) {
-    if (arr[i].yearsOfExperience > 1 ) {
-        let o ={};
-        let x;
-        if(arr[i].lastName == null)
-        { x =arr[i].firstName;}
-        else
-        {x =arr[i].firstName+" "+arr[i].lastName;}
-        let y = arr[i].tech ;
-        o.fullName = x;
-        o.tech =y ;
-        arrMod.push(o);  }
-}
-}
-
-arrFilter(cvs);
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -105,11 +86,11 @@ arrFilter(cvs);
 const targetArrayInGivenOrder = (numsArr, indexArr) => {
   let targetArr;
   // write your code here
-  for (let i = 0; i < indexArr.length; i++) {
-    targetArr[i] = numsArr[indexArr[i]]
-  }
-  console.log(targetArr);
-
+  targetArr =[];
+  for (let i = 0; i < numsArr.length; i++) {
+    // targetArr.splice(indexArr[i], 0, numsArr[i]);
+    targetArr.push(numsArr[indexArr[i]])
+};
 
   return targetArr;
 };
@@ -131,7 +112,6 @@ const arrInc = (arr) => {
   let result = [];
   // write your code here
   for (let i = 0; i < arr.length; i++)
-
   result.push(arr[i] + 10)
     
   return result;
